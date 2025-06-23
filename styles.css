@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Controls Panel */
+.controls {
+  width: 500px;
+  padding: 24px;
+  background-color: #ffffff;
+  border-right: 2px solid #e5e7eb;
+  overflow-y: auto;
+}
+
+.controls h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin: 12px 0 6px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #f9fafb;
+}
+
+textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.radio-section {
+  margin-top: 16px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.radio-group label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.button-group {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 14px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+/* Graph & Result Area */
+.graph-area {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9fafb;
+  overflow: auto;
+}
+
+svg {
+  border: 2px dashed #94a3b8;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+#result {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #e0f2fe;
+  color: #0c4a6e;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+}
+
+
+circle {
+  fill: steelblue;
+  stroke: black;
+  stroke-width: 1;
+}
+
+text {
+  fill: white;
+  font-size: 14px;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.weight{
+  fill: #111827;
+  font-size: 20px;
+  font: bolder;
+}
