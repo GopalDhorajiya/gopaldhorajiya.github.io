@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graph Visualization</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Left Controls Panel -->
+    <div class="controls">
+      <h1>Custom Graph Visualizer</h1>
+
+      <label for="nodes">Nodes:</label>
+      <input type="text" id="nodes" value="A,B,C,D" />
+
+      <label for="edges">Edges:</label>
+      <textarea id="edges">A B 1
+B C 2
+C D 3
+D A 4
+B D 5
+</textarea>
+
+      <p id="error" class="error-text"></p>
+
+      <label for="startNode">Start Node:</label>
+      <input type="text" id="startNode" value="A" />
+
+      <div class="radio-section">
+        <label>Direction:</label>
+        <div class="radio-group">
+          <label><input type="radio" id="undirected" name="direction" value="undirected" checked /> Undirected</label>
+          <label><input type="radio" id="directed" name="direction" value="directed" /> Directed</label>
+        </div>
+      </div>
+
+      <div class="radio-section">
+        <label>Weight:</label>
+        <div class="radio-group">
+          <label><input type="radio" id="weighted" name="weightedtype" value="weighted" /> Weighted</label>
+          <label><input type="radio" id="unweighted" name="weightedtype" value="unweighted" checked /> Unweighted</label>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button onclick="updategraph()">Update Graph</button>
+       <!-- <button onclick="resetGraph()">Reset Graph</button> -->
+        <button onclick="runDfs()">DFS on Graph</button>
+        <button onclick="runBfs()">BFS on Graph</button>
+        <button onclick="primsAlgo()">Prim's Algorithm</button>
+        <button onclick="dijkstraAlgo()">Dijkstra Algorithm</button>
+        <button onclick="checkcycle()">Cycle Detection</button> 
+        <button onclick="checktopoSort()">Topological Sort</button>  
+        <button onclick="SCC()">SCC</button>  
+      </div>
+    </div>
+
+    <!-- Right Graph + Result -->
+    <div class="graph-area">
+      <svg id="graph" width="700" height="500"></svg>
+      <p id="result">Traversal results will appear here...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
